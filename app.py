@@ -70,7 +70,6 @@ thead tr th {
 # SIDEBAR NAVIGATION
 # ======================================================
 st.sidebar.title("🎾 Tennis Sports Intelligence Dashboard")
-st.caption("Interactive insights into player rankings, competitors, country-wise dominance and leaderboard")
 
 
 page = st.sidebar.radio(
@@ -89,6 +88,16 @@ page = st.sidebar.radio(
 # HOME PAGE
 # ======================================================
 if page == "🏠 Home":
+    st.markdown(
+        """
+        <div style="text-align: center; margin-bottom: 10px;">
+            <img src="https://images.unsplash.com/photo-1622163642998-1ea32b0bbc67?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                 width="200"
+                 style="border-radius: 14px; box-shadow: 0 6px 16px rgba(0,0,0,0.18);">
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
     st.title("🎾 Tennis SportRadar Analytics Dashboard")
 
     st.markdown("""
