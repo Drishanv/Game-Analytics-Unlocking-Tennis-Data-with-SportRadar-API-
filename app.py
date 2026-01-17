@@ -69,7 +69,6 @@ thead tr th {
 # ======================================================
 # SIDEBAR NAVIGATION
 # ======================================================
-st.sidebar.title("🎾 Tennis Sports Intelligence Dashboard")
 st.sidebar.markdown(
     """
     <div style="text-align: center; margin-bottom: 15px;">
@@ -80,6 +79,7 @@ st.sidebar.markdown(
     """,
     unsafe_allow_html=True
 )
+st.sidebar.title("🎾 Tennis Sports Intelligence Dashboard")
 
 page = st.sidebar.radio(
     "Navigate",
