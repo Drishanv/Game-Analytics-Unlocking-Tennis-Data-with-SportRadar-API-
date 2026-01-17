@@ -70,6 +70,8 @@ thead tr th {
 # SIDEBAR NAVIGATION
 # ======================================================
 st.sidebar.title("🎾 Tennis Sports Intelligence Dashboard")
+st.caption("Interactive insights into player rankings, competitors, country-wise dominance and leaderboard")
+
 
 page = st.sidebar.radio(
     "Navigate",
