@@ -11,10 +11,7 @@ def get_engine():
         f"@{db['host']}:{db['port']}/{db['database']}"
         "?sslmode=require"
     )
-    return create_engine(
-        url,
-        poolclass=NullPool
-    )
+    return create_engine(url, poolclass=NullPool)
 
 @st.cache_data(ttl=600)
 def run_query(query):
