@@ -102,10 +102,12 @@ if page == "🏠 Home":
     - Decision support for sports analytics
 
     ### 🛠 Tech Stack
-    - **Database**: MySQL  
+    - **Database**: PostgreSQL
     - **Backend**: Python  
     - **Frontend**: Streamlit  
     - **Visualization**: Plotly  
+    - **Cloud Platform**: Supabase
+    - **Deployment**: Streamlit Cloud
     """)
 
 # ======================================================
