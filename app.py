@@ -70,7 +70,16 @@ thead tr th {
 # SIDEBAR NAVIGATION
 # ======================================================
 st.sidebar.title("🎾 Tennis Sports Intelligence Dashboard")
-
+st.sidebar.markdown(
+    """
+    <div style="text-align: center; margin-bottom: 15px;">
+        <img src="https://images.unsplash.com/photo-1622163642998-1ea32b0bbc67?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+             width="140"
+             style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 page = st.sidebar.radio(
     "Navigate",
@@ -88,16 +97,6 @@ page = st.sidebar.radio(
 # HOME PAGE
 # ======================================================
 if page == "🏠 Home":
-    st.markdown(
-        """
-        <div style="text-align: center; margin-bottom: 10px;">
-            <img src="https://images.unsplash.com/photo-1622163642998-1ea32b0bbc67?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                 width="200"
-                 style="border-radius: 14px; box-shadow: 0 6px 16px rgba(0,0,0,0.18);">
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
     st.title("🎾 Tennis SportRadar Analytics Dashboard")
 
     st.markdown("""
