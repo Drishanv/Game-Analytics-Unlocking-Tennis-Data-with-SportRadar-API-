@@ -9,7 +9,12 @@ def get_engine():
         f"postgresql+psycopg2://{db['user']}:{db['password']}"
         f"@{db['host']}:{db['port']}/{db['database']}"
     )
-    return create_engine(url)
+    return create_engine(
+        url,
+        pool_pre_ping=True,
+        pool_size=5,
+        max_overflow=0
+    )
 
 @st.cache_data(ttl=600)
 def run_query(query):
