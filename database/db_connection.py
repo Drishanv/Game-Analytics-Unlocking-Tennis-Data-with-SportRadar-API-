@@ -12,9 +12,10 @@ def get_connection():
             port=st.secrets["mysql"]["port"]
         )
         return conn
-    except Exception as e:
-        st.error("❌ Database connection failed")
-        st.stop()
+except Exception as e:
+    st.error("❌ Database connection failed")
+    st.error(str(e))   # 👈 ADD THIS LINE
+    st.stop()
 
 def run_query(query):
     conn = get_connection()
