@@ -69,7 +69,7 @@ thead tr th {
 # ======================================================
 # SIDEBAR NAVIGATION
 # ======================================================
-st.sidebar.title("🎾 Tennis Analytics")
+st.sidebar.title("🎾 Tennis Sports Intelligence Dashboard")
 
 page = st.sidebar.radio(
     "Navigate",
