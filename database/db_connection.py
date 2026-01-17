@@ -11,6 +11,7 @@ def get_engine():
     )
     return create_engine(url)
 
+@st.cache_data(ttl=600)
 def run_query(query):
     engine = get_engine()
     return pd.read_sql(query, engine)
