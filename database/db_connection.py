@@ -8,6 +8,7 @@ def get_engine():
     url = (
         f"postgresql+psycopg2://{db['user']}:{db['password']}"
         f"@{db['host']}:{db['port']}/{db['database']}"
+        "?sslmode=require"
     )
     return create_engine(
         url,
