@@ -88,7 +88,14 @@ Relational schema ensures:
 - Countries represented
 - Highest points scored
 
-![Home Dashboard](Home.png)
+![Home Dashboard](Streamlit-dashboard/Home.png)
+
+---
+
+### 📊 Dashboard Overview
+- Quick KPI view of the entire dataset
+
+![Dashboard Overview](Streamlit-dashboard/Dashboard overview.png)
 
 ---
 
@@ -99,7 +106,7 @@ Relational schema ensures:
   - Rank range
   - Points threshold
 
-![Search & Filter](Search_and_Filter_Competitors.png)
+![Search & Filter](Streamlit-dashboard/Search and filter competitors.png)
 
 ---
 
@@ -111,7 +118,7 @@ Relational schema ensures:
   - Competitions played
   - Country
 
-![Competitor Details](Competitor_Details.png)
+![Competitor Details](Streamlit-dashboard/Competitor details.png)
 
 ---
 
@@ -120,7 +127,7 @@ Relational schema ensures:
 - Total competitors per country
 - Country dominance insights
 
-![Country Analysis](Country_wise_Analysis.png)
+![Country Analysis](Streamlit-dashboard/Country wise analysis.png)
 
 ---
 
@@ -128,7 +135,7 @@ Relational schema ensures:
 - Top-ranked competitors
 - Competitors with highest points
 
-![Leaderboards](Leaderboards.png)
+![Leaderboards](Streamlit-dashboard/Leaderboard insights.png)
 
 ---
 
