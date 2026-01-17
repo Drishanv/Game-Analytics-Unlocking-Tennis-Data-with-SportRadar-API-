@@ -1,6 +1,6 @@
 import streamlit as st
 import plotly.express as px
-from db_connection import run_query
+from database.db_connection import run_query
 
 # ======================================================
 # PAGE CONFIG
