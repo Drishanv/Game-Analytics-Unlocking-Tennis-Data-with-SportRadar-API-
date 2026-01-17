@@ -14,4 +14,5 @@ def get_engine():
 @st.cache_data(ttl=600)
 def run_query(query):
     engine = get_engine()
-    return pd.read_sql(query, engine)
+    with engine.connect() as conn:
+        return pd.read_sql(query, conn)
