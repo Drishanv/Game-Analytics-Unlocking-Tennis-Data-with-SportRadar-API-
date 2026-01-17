@@ -1,29 +1,27 @@
-import streamlit as st
-from sqlalchemy import create_engine
-from sqlalchemy.pool import NullPool
+import psycopg2
 import pandas as pd
+import streamlit as st
 
 
-@st.cache_resource
-def get_engine():
-    db = st.secrets["postgres"]
+def get_connection():
+    try:
+        conn = psycopg2.connect(
+            host=st.secrets["postgres"]["host"],
+            user=st.secrets["postgres"]["user"],
+            password=st.secrets["postgres"]["password"],
+            dbname=st.secrets["postgres"]["database"],
+            port=st.secrets["postgres"]["port"],
+            sslmode="require"
+        )
+        return conn
+    except Exception as e:
+        st.error("❌ Database connection failed")
+        st.error(str(e))
+        st.stop()
 
-    DATABASE_URL = (
-        f"postgresql+psycopg2://{db['user']}:{db['password']}"
-        f"@{db['host']}:{db['port']}/{db['database']}"
-        "?sslmode=require"
-    )
 
-    engine = create_engine(
-        DATABASE_URL,
-        poolclass=NullPool,   # IMPORTANT for Supabase + Streamlit
-    )
-
-    return engine
-
-
-@st.cache_data(ttl=600)
-def run_query(query: str):
-    engine = get_engine()
-    with engine.connect() as connection:
-        return pd.read_sql(query, connection)
+def run_query(query):
+    conn = get_connection()
+    df = pd.read_sql(query, conn)
+    conn.close()
+    return df
