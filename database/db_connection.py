@@ -1,5 +1,6 @@
 import streamlit as st
 from sqlalchemy import create_engine
+from sqlalchemy.pool import NullPool
 import pandas as pd
 
 @st.cache_resource
@@ -12,9 +13,7 @@ def get_engine():
     )
     return create_engine(
         url,
-        pool_pre_ping=True,
-        pool_size=5,
-        max_overflow=0
+        poolclass=NullPool
     )
 
 @st.cache_data(ttl=600)
