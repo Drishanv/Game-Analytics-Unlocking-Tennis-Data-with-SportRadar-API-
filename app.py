@@ -71,10 +71,19 @@ thead tr th {
 # ======================================================
 st.sidebar.markdown(
     """
-    <div style="text-align: center; margin-bottom: 15px;">
-        <img src="https://images.unsplash.com/photo-1622163642998-1ea32b0bbc67?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-             width="140"
-             style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+    <div style="
+        display: flex;
+        justify-content: center;
+        margin-bottom: 12px;
+    ">
+        <img src="https://images.unsplash.com/photo-1622163642998-1ea32b0bbc67?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0"
+             style="
+                width: 130px;
+                height: 110px;
+                object-fit: cover;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+             ">
     </div>
     """,
     unsafe_allow_html=True
