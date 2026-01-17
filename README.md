@@ -2,7 +2,7 @@
 
 An end-to-end **Sports Analytics Dashboard** built using **Python, SQL, Streamlit, and the SportRadar API** to analyze tennis competitor rankings, performance trends, and country-wise insights through an interactive web application.
 
-Streamlit live URL- https://game-analytics.streamlit.app/
+Dashboard URL- https://game-analytics.streamlit.app/
 ---
 
 ## 📌 Project Overview
