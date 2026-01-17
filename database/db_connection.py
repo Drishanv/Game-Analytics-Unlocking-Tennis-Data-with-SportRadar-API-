@@ -15,3 +15,9 @@ def get_connection():
         st.error("❌ Database connection failed")
         st.error(str(e))
         st.stop()
+
+def run_query(query):
+    conn = get_connection()
+    df = pd.read_sql(query, conn)
+    conn.close()
+    return df
