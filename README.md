@@ -95,7 +95,7 @@ Relational schema ensures:
 ### 📊 Dashboard Overview
 - Quick KPI view of the entire dataset
 
-![Dashboard Overview](Streamlit-dashboard/Dashboard overview.png)
+![Dashboard Overview](Streamlit-dashboard/Dashboard%20overview.png)
 
 ---
 
@@ -106,40 +106,32 @@ Relational schema ensures:
   - Rank range
   - Points threshold
 
-![Search & Filter](Streamlit-dashboard/Search and filter competitors.png)
+![Search & Filter](Streamlit-dashboard/Search%20and%20filter%20competitors.png)
 
 ---
 
 ### 👤 Competitor Details
-- View detailed information of a selected competitor:
-  - Rank
-  - Movement
-  - Points
-  - Competitions played
-  - Country
+- Rank, movement, points, competitions played
 
-![Competitor Details](Streamlit-dashboard/Competitor details.png)
+![Competitor Details](Streamlit-dashboard/Competitor%20details.png)
 
 ---
 
 ### 🌍 Country-wise Analysis
-- Average points by country
-- Total competitors per country
-- Country dominance insights
+- Country dominance and average points
 
-![Country Analysis](Streamlit-dashboard/Country wise analysis.png)
+![Country-wise Analysis](Streamlit-dashboard/Country%20wise%20analysis.png)
 
 ---
 
 ### 🏆 Leaderboards
-- Top-ranked competitors
-- Competitors with highest points
+- Top-ranked & highest points competitors
 
-![Leaderboards](Streamlit-dashboard/Leaderboard insights.png)
+![Leaderboards](Streamlit-dashboard/Leaderboard%20insights.png)
 
 ---
 
-## 📊 Sample SQL Insights
+## 📊 SQL Insights
 
 - Top-ranked competitors
 - Highest points scorers
