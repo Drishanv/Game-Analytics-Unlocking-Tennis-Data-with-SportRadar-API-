@@ -2,6 +2,7 @@ import mysql.connector
 import pandas as pd
 import streamlit as st
 
+
 def get_connection():
     try:
         conn = mysql.connector.connect(
@@ -9,13 +10,15 @@ def get_connection():
             user=st.secrets["mysql"]["user"],
             password=st.secrets["mysql"]["password"],
             database=st.secrets["mysql"]["database"],
-            port=st.secrets["mysql"]["port"]
+            port=st.secrets["mysql"]["port"],
         )
         return conn
-except Exception as e:
-    st.error("❌ Database connection failed")
-    st.error(str(e))   # 👈 ADD THIS LINE
-    st.stop()
+
+    except Exception as e:
+        st.error("❌ Database connection failed")
+        st.error(str(e))  # show real error
+        st.stop()
+
 
 def run_query(query):
     conn = get_connection()
