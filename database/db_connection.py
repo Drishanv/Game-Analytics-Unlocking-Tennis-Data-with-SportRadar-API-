@@ -1,27 +1,16 @@
-import psycopg2
-import pandas as pd
 import streamlit as st
+from sqlalchemy import create_engine
+import pandas as pd
 
-
-def get_connection():
-    try:
-        conn = psycopg2.connect(
-            host=st.secrets["postgres"]["host"],
-            user=st.secrets["postgres"]["user"],
-            password=st.secrets["postgres"]["password"],
-            dbname=st.secrets["postgres"]["database"],
-            port=st.secrets["postgres"]["port"],
-            sslmode="require"
-        )
-        return conn
-    except Exception as e:
-        st.error("❌ Database connection failed")
-        st.error(str(e))
-        st.stop()
-
+@st.cache_resource
+def get_engine():
+    db = st.secrets["postgres"]
+    url = (
+        f"postgresql+psycopg2://{db['user']}:{db['password']}"
+        f"@{db['host']}:{db['port']}/{db['database']}"
+    )
+    return create_engine(url)
 
 def run_query(query):
-    conn = get_connection()
-    df = pd.read_sql(query, conn)
-    conn.close()
-    return df
+    engine = get_engine()
+    return pd.read_sql(query, engine)
